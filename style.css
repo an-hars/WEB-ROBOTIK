@@ -1,0 +1,736 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset dan Styling Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- WARNA UTAMA: Biru (#007bff) --- */
+
+/* Tombol Dasar */
+.btn-primary {
+    display: inline-block;
+    background-color: #007bff; /* Biru */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: white;
+    color: #007bff; /* Biru */
+    padding: 10px 25px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* --- Header / Navigasi Desktop (FIXED DI ATAS) --- */
+.header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed; /* PENTING: Membuat Header Tetap */
+    width: 100%;
+    top: 0; /* PENTING: Tetap di bagian atas */
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #007bff; /* Biru */
+}
+
+/* Navigasi Desktop */
+.nav-menu-desktop a {
+    margin-left: 25px;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-menu-desktop a:hover {
+    color: #007bff;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    padding: 150px 0 50px;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff; /* Fallback Warna Biru */
+    z-index: -1;
+}
+.logo {
+    
+    display: flex;
+    align-items: center;
+}
+
+/* Styling untuk gambar logo yang baru */
+.logo-img {
+    height: 40px; /* Atur tinggi gambar logo */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.05); /* Efek kecil saat hover */
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* GANTI URL FOTO INI DENGAN FOTO ASLI ANDA */
+    background-image: url('images/pp.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; 
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.85) 0%, rgba(0, 198, 255, 0.85) 100%);
+    z-index: 0;
+}
+.logo-link {
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Sejajarkan secara vertikal (tengah) */
+    gap: 10px; /* Jarak antara logo gambar dan teks */
+    text-decoration: none;
+    color: #007bff; /* Atur warna default untuk teks logo */
+    font-weight: 700;
+}
+.logo-img {
+    height: 40px; /* Tinggi gambar logo */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Styling Teks Logo */
+.logo-text {
+    font-size: 1.2em; /* Atur ukuran teks logo agar proporsional */
+    font-weight: 700;
+    color: #333; /* Warna teks yang kontras */
+}
+/* Anda dapat menambahkan style hover untuk teks logo jika diinginkan */
+.logo-link:hover .logo-text {
+    color: #007bff;
+}
+
+/* Hapus style lama jika ada, atau pastikan ini yang digunakan */
+.logo {
+    display: flex; /* Memastikan div.logo adalah flex container */
+    align-items: center;
+}
+/* --- Media Query untuk Tampilan Mobile (Max Width 768px) --- */
+@media (max-width: 768px) {
+    
+    /* PENGATURAN LOGO UNTUK MOBILE */
+    
+    /* 1. Gambar Logo diperkecil */
+    .logo-img {
+        height: 32px; /* Tinggi logo diperkecil di mobile */
+    }
+
+    /* 2. Teks Logo disembunyikan untuk menghemat ruang, hanya tampilkan Gambar Logo */
+    .logo-text {
+        display: none; 
+    }
+    
+   
+    
+
+    /* 3. Sesuaikan tinggi header jika perlu */
+     .header {
+        padding: 10px 0; /* Header lebih tipis di mobile */
+    }
+
+}
+.cloud-left, .cloud-right {
+    position: absolute;
+    width: 300px; 
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.8;
+    z-index: 2; 
+}
+
+.cloud-left { top: 50px; left: 0; transform: rotate(-10deg); }
+.cloud-right { bottom: 50px; right: 0; transform: rotate(15deg); }
+
+.hero-content {
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-content h1 { font-size: 3.5em; margin-bottom: 10px; font-weight: 700; }
+.hero-content p { font-size: 1.2em; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* === PROGRAM SECTION (4 CARDS) === */
+.program-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.program-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.program-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    flex: 1 1 22%; 
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.program-card i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.program-card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- Latihan Section (Countdown) --- */
+.latihan-section {
+    padding: 80px 0;
+    background-color: #e9f5ff;
+}
+.countdown-box {
+    text-align: center;
+    max-width: 700px; /* Lebarkan sedikit */
+    margin: 20px auto;
+    padding: 40px; /* Tambah padding */
+    background: white;
+    border-radius: 20px; /* Radius lebih besar */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Shadow lebih menonjol */
+    border: 1px solid #e0e0e0; /* Border halus */
+}
+.countdown-box h3 {
+    color: #007bff;
+    margin-bottom: 25px; /* Tambah margin */
+    font-size: 1.8em; /* Perbesar judul */
+    font-weight: 700;
+}
+/* ... (Styling Latihan Section lainnya tetap sama) ... */
+
+/* --- Projek Section (Galeri Kiri-Kanan) --- */
+.project-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.project-gallery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    margin-top: 40px;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Layout Kanan-Kiri (Default) */
+.project-row {
+    flex-direction: row; 
+}
+
+/* Layout Kiri-Kanan (Untuk kelas .reverse-row) */
+.project-row.reverse-row {
+    flex-direction: row-reverse;
+}
+
+.project-media {
+    flex: 1;
+    min-width: 45%;
+    height: 350px; 
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-details {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.project-maker {
+    display: block;
+    font-size: 0.9em;
+    color: #007bff; 
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* === CSS UNTUK FITUR VIEW ALL === */
+.hidden-project {
+    display: none; 
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#view-all-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 12px 30px;
+}
+
+#view-all-button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* --- OPREC Section --- */
+.oprec-section {
+    padding: 100px 0;
+    background: linear-gradient(90deg, #007bff, #00c6ff); 
+    color: white;
+    text-align: center;
+}
+/* ... (Styling OPREC Section lainnya tetap sama) ... */
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 80px 0;
+    background-color: #343a40;
+    color: white;
+}
+/* ... (Styling Contact Section lainnya tetap sama) ... */
+
+/* --- Footer --- */
+.footer {
+    background-color: #212529;
+    color: white;
+    padding-top: 20px;
+}
+/* ... (Styling Footer lainnya tetap sama) ... */
+
+/* --- NAVIGASI MOBILE BAR (Desktop Default: Sembunyi) --- */
+.nav-mobile-bar {
+    display: none;
+    position: fixed; /* PENTING: Membuat Navigasi Mobile Tetap */
+    bottom: 0; /* PENTING: Tetap di bagian bawah */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+
+/* --- Media Query untuk Tampilan Mobile (Max Width 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Sembunyikan Navigasi Desktop */
+    .nav-menu-desktop {
+        display: none;
+    }
+
+    /* 2. Tampilkan Navigasi Mobile Bar */
+    .nav-mobile-bar {
+        display: flex; /* Override display: none; */
+    }
+    
+    .nav-mobile-bar .mobile-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #777;
+        font-size: 0.7em;
+        font-weight: 600;
+        padding: 5px;
+        transition: color 0.3s;
+    }
+    
+    .nav-mobile-bar .mobile-item:hover {
+        color: #007bff;
+    }
+    
+    .nav-mobile-bar .mobile-item i {
+        font-size: 1.3em;
+        margin-bottom: 3px;
+    }
+    
+    /* 3. Sesuaikan Padding Konten agar tidak Tertutup Mobile Bar */
+    .hero-section, .latihan-section, .project-section, .oprec-section, .contact-section {
+        padding-bottom: 100px; /* Tambahkan ruang di bawah */
+    }
+
+    /* 4. PERBAIKAN: Projek Section menjadi vertikal di mobile */
+    .project-row,
+    .project-row.reverse-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .project-media {
+        min-width: 100%;
+        height: 250px; /* Kurangi tinggi media di mobile */
+    }
+    
+    /* 5. Program Cards menjadi 2x2 */
+    .program-cards {
+        justify-content: center;
+    }
+    .program-card {
+        flex: 1 1 45%; 
+    }
+    
+    /* 6. Penyesuaian Layout Lain */
+   .timer {
+    display: flex;
+    justify-content: center; /* Tengahkan unit waktu */
+    margin-bottom: 30px; /* Tambah margin */
+    flex-wrap: wrap;
+    gap: 25px; /* Jarak antar unit waktu */
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    background-color: #f8fafd; /* Latar belakang untuk setiap unit */
+    padding: 15px 20px; /* Padding unit waktu */
+    border-radius: 12px; /* Radius unit waktu */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Shadow halus */
+    min-width: 100px; /* Lebar minimum */
+}
+
+.time-unit span {
+    font-size: 3.2em; /* Perbesar angka */
+    color: #343a40;
+    /* Hapus padding, background, border-radius di sini karena sudah di .time-unit */
+    margin-bottom: 5px;
+    line-height: 1; /* Rapat ke atas */
+}
+
+.time-unit label {
+    font-size: 0.9em;
+    color: #6c757d; /* Warna teks lebih lembut */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.message-text {
+    font-weight: 600;
+    color: #dc3545; /* Tetap merah untuk pesan penting */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+   .contact-grid {
+    display: flex;
+    gap: 60px; /* Jarak antar kolom */
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-info { 
+    flex: 1; 
+    min-width: 300px; 
+    padding-top: 15px; /* Sesuaikan padding */
+}
+.contact-form { 
+    flex: 2; 
+    min-width: 400px; 
+}
+
+.contact-info h2 { 
+    font-size: 2.8em; /* Perbesar judul utama */
+    font-weight: 700; 
+    margin-bottom: 25px; /* Tambah margin */
+    color: #00c6ff; /* Warna biru cerah */
+    border-bottom: 3px solid #00c6ff; /* Garis bawah menonjol */
+    display: inline-block; /* Agar garis bawah pas dengan teks */
+    padding-bottom: 8px;
+}
+.contact-info h3 { 
+    font-size: 1.6em; /* Perbesar sub-judul */
+    margin-top: 30px; /* Jarak dari judul utama */
+    margin-bottom: 20px; /* Jarak ke info kontak */
+    font-weight: 600;
+    color: #f0f0f0; /* Warna lebih lembut */
+}
+.contact-info p { 
+    margin-bottom: 12px; /* Jarak antar baris info */
+    font-size: 1.05em; /* Perbesar teks */
+    display: flex; /* Untuk mensejajarkan ikon dan teks */
+    align-items: center;
+}
+.contact-info i { 
+    margin-right: 15px; /* Tambah jarak ikon */
+    color: #00c6ff; /* Ikon biru cerah */
+    font-size: 1.3em; /* Perbesar ikon */
+}
+
+.social-icons { 
+    margin-top: 30px; /* Jarak dari info kontak */
+    display: flex; /* Untuk layout ikon */
+    gap: 20px; /* Jarak antar ikon */
+}
+.social-icons a { 
+    color: white; 
+    font-size: 1.6em; /* Perbesar ikon */
+    transition: color 0.3s, transform 0.3s; 
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Bentuk lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.social-icons a:hover { 
+    color: #00c6ff; 
+    transform: translateY(-3px) scale(1.1); /* Efek hover menarik */
+    background-color: rgba(0, 198, 255, 0.2);
+    border-color: #00c6ff;
+}
+
+/* Styling Form Kontak */
+.contact-form h3 {
+    font-size: 1.8em;
+    color: #00c6ff;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px; /* Tambah padding */
+    margin-bottom: 18px; /* Tambah margin bawah */
+    border: 1px solid #555;
+    background-color: #3a4b5d; /* Warna latar input lebih gelap */
+    color: white;
+    border-radius: 8px; /* Radius lebih halus */
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder { 
+    color: #a0a0a0; /* Warna placeholder lebih terang */
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #00c6ff;
+    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.3);
+    outline: none;
+}
+.form-group-row { 
+    display: flex; 
+    gap: 20px; /* Jarak antar input dalam satu baris */
+}
+.form-group-row input { 
+    flex: 1; 
+}
+.contact-form textarea { 
+    resize: vertical; 
+    min-height: 120px; /* Tinggi minimum textarea */
+}
+
+.contact-form .btn-primary {
+    width: auto; /* Agar tombol tidak melebar penuh */
+    margin-top: 10px; /* Jarak dari textarea */
+    padding: 14px 40px; /* Padding tombol kirim */
+    font-size: 1.1em;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradien pada tombol */
+    border: none;
+}
+
+.contact-form .btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #00a4d9);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* --- Footer --- */
+/* ... (Bagian CSS ini tetap sama) ... */
+
+/* --- NAVIGASI MOBILE BAR (Desktop Default: Sembunyi) --- */
+/* ... (Bagian CSS ini tetap sama) ... */
+
+/* --- Media Query untuk Tampilan Mobile (Max Width 768px) --- */
+@media (max-width: 768px) {
+    /* ... (Media Query bagian Header, Mobile Bar, Program Cards, Project Section tetap sama) ... */
+
+    /* Penyesuaian Countdown Timer di Mobile */
+    .countdown-box {
+        padding: 30px 20px;
+    }
+    .countdown-box h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .timer {
+        gap: 15px;
+    }
+    .time-unit {
+        min-width: 80px;
+        padding: 10px 15px;
+    }
+    .time-unit span {
+        font-size: 2.5em;
+    }
+    .time-unit label {
+        font-size: 0.8em;
+    }
+    .message-text {
+        font-size: 1em;
+    }
+
+    /* Penyesuaian Contact Section di Mobile */
+    .contact-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-info, .contact-form {
+        min-width: unset; /* Hapus min-width */
+        width: 100%;
+    }
+    .contact-info h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #00c6ff;
+    }
+    .contact-info h3 {
+        font-size: 1.3em;
+        margin-top: 25px;
+    }
+    .social-icons {
+        justify-content: center; /* Tengahkan ikon sosial */
+    }
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        margin-bottom: 15px;
+    }
+    .contact-form .btn-primary {
+        width: 100%; /* Tombol melebar penuh di mobile */
+    }
+}
+}

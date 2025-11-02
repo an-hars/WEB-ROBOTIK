@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robotik man 2 mataram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="header">
+    <div class="container nav-container">
+        <div class="logo">
+            <a href="#hero" class="logo-link"> 
+                <img src="images/logo.png" alt="Logo Manda Robotik Team" class="logo-img">
+                <span class="logo-text">MAN 2 MATARAM ROBOTIK TEAM</span>
+            </a>
+        </div>
+        <nav class="nav-menu-desktop">
+            <a href="#program">Program</a> 
+            <a href="#latihan">Latihan</a>
+            <a href="#projek">Projek</a>
+            <a href="#oprec">Oprec</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+   <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-image-placeholder"></div> 
+            <div class="image-overlay"></div>
+            
+            <div class="cloud-left"></div>
+            <div class="cloud-right"></div>
+        </div>
+        <div class="container hero-content">
+            <h1>Manda Robotik Team</h1>
+            <p>Manda Robotik Team merupakan ekstrakulikuler yang ada di MAN 2 Mataram bergelut di dunia teknologi khususnya robot.</p>
+            <a href="#contact" class="btn-primary">Contact Me</a>
+        </div>
+    </section>
+    <section class="program-section" id="program">
+        <div class="container">
+            <h2 class="section-title">PROGRAM INTI KAMI</h2>
+            <p class="section-subtitle">Fokus pelatihan dan kompetensi Manda Robotik Team.</p>
+            <div class="program-cards">
+                
+                <div class="card program-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Basic Robotik</h3>
+                    <p>Mempelajari dasar-dasar komponen, rangkaian elektronik sederhana, dan pemrograman mikrokontroler (Arduino/Microbit).</p>
+                </div>
+
+                <div class="card program-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>AI & Sensor</h3>
+                    <p>Fokus pada penggunaan sensor canggih, pengolahan data, dan implementasi algoritma dasar Artificial Intelligence pada robot.</p>
+                </div>
+
+                <div class="card program-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Pendalaman bahasa C/C++ untuk robotika, optimasi kode, dan teknik *debugging* untuk memastikan fungsionalitas robot yang kompleks.</p>
+                </div>
+
+                <div class="card program-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Kompetisi</h3>
+                    <p>Persiapan intensif untuk berbagai ajang kompetisi robotika nasional dan internasional, melatih strategi dan kecepatan prototipe.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="latihan-section" id="latihan">
+        <div class="container">
+            <h2 class="section-title">JADWAL LATIHAN & HITUNG MUNDUR</h2>
+            <p class="section-subtitle">Latihan rutin diadakan setiap hari Sabtu pukul **14:00 WITA**. Siap-siap!</p>
+            
+            <div class="countdown-box">
+                <h3>Latihan Dimulai Dalam:</h3>
+                <div id="countdown-timer" class="timer">
+                    <div class="time-unit">
+                        <span id="days">00</span>
+                        <label>Hari</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="hours">00</span>
+                        <label>Jam</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutes">00</span>
+                        <label>Menit</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <label>Detik</label>
+                    </div>
+                </div>
+                <p id="countdown-message" class="message-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section" id="projek">
+        <div class="container">
+            <h2 class="section-title">GALERI PROJEK KAMI</h2>
+            <p class="section-subtitle">Lihat hasil-hasil terbaik dari tim kami dan siapa pembuatnya.</p>
+            
+            <div class="project-gallery-list">
+                
+                <div class="project-row">
+                    <div class="project-media">
+                        <img src="images/roobotmaul.jpeg" alt="pertanian">
+                    </div>
+                    <div class="project-details">
+                        <span class="project-maker">Dibuat oleh: maulana dwi febrian arajak</span>
+                        <span class="project-maker"> dan yaskiram muhammad alfarashin</span>
+                        <h3>Robot Padi Genz</h3>
+                        <p>Robot ini dirancang untuk mendeteksi kadar air yang tinggi di padi, dimana pada umumnya para petani ketika ingin menapatkan hasil padi yang baik harus memiliki kadar air 13% pada padinya .</p>
+                        >
+                    </div>
+                </div>
+
+                <div class="project-row reverse-row">
+                    <div class="project-media">
+                        <img src="images/tamia.jpeg" alt="Sistem Kontrol Drone Sederhana">
+                    </div>
+                    <div class="project-details">
+                       <span class="project-maker">Dibuat oleh: maulana dwi febrian arajak</span>
+                        <span class="project-maker"> dan yaskiram muhammad alfarashin</span>
+                        <h3>mobil berbasis bluetooth yang di kontrol lewat hp</h3>
+                        <p>Inovasi dalam kontrol prototipe mobil berbasis Arduino, memungkinkan navigasi yang lebih stabil untuk pemetaan skala kecil.</p>
+                        >
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-media">
+                        <img src="images/mobil.jpeg" alt="Lengan Robot Pemilah Barang">
+                    </div>
+                    <div class="project-details">
+                        <span class="project-maker">Dibuat oleh: aisyah zukhrufi firdausy</span>
+                        <span class="project-maker"> dan yaskiram muhammad alfarashin</span>
+                        <h3>robot avoider</h3>
+                        <p>robot yang bergerak secara otomatis dalam menghindar objek</p>
+                        >
+                    </div>
+                </div>
+
+                <div class="project-row reverse-row">
+                    <div class="project-media">
+                        <img src="images/avoider.jpeg" alt="Kendaraan Tenaga Surya Mini">
+                    </div>
+                    <div class="project-details">
+                        <span class="project-maker">Dibuat oleh:andi emirsyah wicaksana</span>
+                           <span class="project-maker"> danish fadhlan harharah</span>
+                        <h3>robot avoider</h3>
+                        <p>robot yang bergerak secara otomatis dalam menghindar objek</p>
+                       
+                    </div>
+                </div>
+                
+              
+
+               
+                
+                <div class="project-row hidden-project">
+                    <div class="project-media">
+                        <img src="images/arkan.jpeg" alt="Projek Tambahan 7">
+                    </div>
+                    <div class="project-details">
+                        <span class="project-maker">Dibuat oleh: atha</span>
+                        <span class="project-maker">Dibuat oleh: arkan</span>
+                        <h3>Robot Agrinextz</h3>
+                        <p>Robot yang dirancang untuk mendeteksi penyakit di integrasikan dengan website untuk mendeteksi penyakit pada tumbuhan dan dapat menyiram ,memberikan pupuk pada tumbuhan melalui web</p>
+                        >
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="view-all-container">
+                <button id="view-all-button" class="btn-primary">Lihat Semua Projek (+2)</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="oprec-section" id="oprec">
+        <div class="container oprec-content">
+            <h2 class="section-title">OPEN RECRUITMENT TIM</h2>
+            <p>Kami mencari talenta digital terbaik untuk bergabung. Jika Anda bersemangat dalam desain, coding, atau marketing, ini kesempatan Anda!</p>
+            <a href="https://share.google/aJS0joGikvdm7iYKr" target="_blank" class="btn-primary oprec-button">DAFTAR SEKARANG</a>
+            <p class="note">Pendaftaran akan ditutup pada akhir bulan ini.</p>
+        </div>
+    </section>
+    
+
+    
+    <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>HUBUNGI KAMI</h2>
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No.25, Dasan Agung Baru, Kec. Selaparang, Kota Mataram, Nusa Tenggara Bar. 83125</p>
+                <p><i class="fas fa-phone"></i> 087816431029</p>
+                <p><i class="fas fa-envelope"></i> MANDA ROBOTIK TEAM</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/man2robotic.team?igsh=MWF6ODFxa2hjZWF3bw=="><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form action="#">
+                    <div class="form-group-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      
+    </footer>
+    
+    <nav class="nav-mobile-bar">
+        <a href="#latihan" class="mobile-item">
+            <i class="fas fa-clock"></i>
+            <span>Latihan</span>
+        </a>
+        <a href="#projek" class="mobile-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Projek</span>
+        </a>
+        <a href="#oprec" class="mobile-item">
+            <i class="fas fa-user-plus"></i>
+            <span>Oprec</span>
+        </a>
+        <a href="#contact" class="mobile-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+
+    </nav>
+    <script src="script.js"></script>
+
+</body>
+</html>
